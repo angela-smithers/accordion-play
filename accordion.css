@@ -66,7 +66,112 @@
     padding: 1em 1.5em;
 }
 
+/*----------------------------------------------------------------------------------- */
+/*  For Playing with Injecting Infinitely Anything  */
+/*----------------------------------------------------------------------------------- */
+
+css-doodle {
+    --rule: ( :doodle {
+      position: absolute;
+      width: 100%;
+      @grid: 10 / 101% 100vh;
+      overflow: hidden;
+    }
+    animation: bounce linear @r(7s, 15s) @r(-1s, -5s) infinite;
+    opacity: @r(0.3, 1);
+    @place-cell: @r(100%) @r(100%);
+    @random(.3) {
+    :after {
+      content: '🍭';
+      position: absolute;
+      font-size: @r(25px, 35px);
+      transform: rotate(@r(360deg));
+    }
+    }
+    @random(.2) {
+      :after {
+        content: '🍫';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+    @random(.2) {
+      :before {
+        content: '🧁';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+    @random(.2) {
+      :before {
+        content: '🍪';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(@r(-101vh, -110vh));
+      }
+      100% {
+        transform: translateY(@r(101vh, 110vh));
+      }
+    }
+    );
+  }
+
+section.play {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  background-color: white;
+  background: linear-gradient(to bottom, #e6f8f9 20%, #b1e8ed 100%);
+  overflow: hidden;
+
+  }
+  
+}
+
+@keyframes load {
+  0% {
+    transform: translateX(-200px);
+  }
+  100% {
+    transform: translateX(-35px);
+  }
+}
+
+@keyframes textBounce {
+  from, 10%{
+        transform: rotate(0deg);
+    }
+  1%, 3%, 5%, 7%, 9% {
+    transform: rotate(10deg);
+  }
+  2%, 4%, 6%, 8% {
+    transform: rotate(-10deg);
+  }
+}
+
+/*----------------------------------------------------------------------------------- */
 /* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+/*----------------------------------------------------------------------------------- */
 .Accordion-panel[hidden] {
   display: none;
 }
