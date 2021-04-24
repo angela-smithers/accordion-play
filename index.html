@@ -4,6 +4,9 @@
     <title>Accordion Timeline</title>
     <link href="accordion.css" media="all" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.1/modernizr.min.js"></script>
+
+    <script src="https://unpkg.com/css-doodle@0.15.3/css-doodle.min.js"></script>
+
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
 
     <link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" media="all" rel="stylesheet">
@@ -428,14 +431,14 @@
               aria-controls="sect2"
               id="accordion2id"
               type="button">
-        <span class="Accordion-title" style="margin: 20px 10px;">
+        <span class="Accordion-title" style="margin: 20px 10px;"></span>
           <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/The_shackle_broken_-_by_the_genius_of_freedom_LCCN2003690777.jpg" alt="The Shackle Broken by Robert Elliot" style="width: 30%;" />
         <div style="width: 60%; float: right; color: whitesmoke;font-size: x-large;margin-right: 7%;">
         	<h2>Filler heading before filler text</h2>
           	<p>It was Greek to me.  This is it, Adam, that grieves me; and the spirit of my father, which I think is within me, begins to mutiny against this servitude.  Come, sing; and you that will not, hold your tongues. I think he be transform'd into a beast; For I can nowhere find him like a man. A miserable world!  As I do live by food, I met a fool, Who laid him down and bask'd him in the sun, And rail'd on Lady Fortune in good terms, In good set terms- and yet a motley fool.   It is my only suit, Provided that you weed your better judgments Of all opinion that grows rank in them That I am wise.  Here comes my sister, reading; stand aside.</p>
 
 		<p>Still more to see if you click me</p></div>
-		</span>
+		
         <span class="Accordion-icon"></span>
       </button>
     </dt>
@@ -474,14 +477,10 @@
               id="accordion3id"
               type="button">
         <span class="Accordion-title" style="margin: 20px 10px;">
-          <div class="paragraphs-item paragraphs-item--promotion-object">
-			  <div class="layout-constrain layout-constrain--med">
-			    <div class="section-title">
-			      <h2 class="section-title__title">Collection Objects</h2>
-			      <div class="section-title__subtitle">Sub-heading goes here</div>
-			    </div>
-			  </div>
-		<p>More!  More!</p></div>
+        <section class="play">
+        	<css-doodle use="var(--rule)"></css-doodle>
+
+		<p style="font-size: x-large;">More, more, more!</p></section>
 		</span>
         <span class="Accordion-icon"></span>
       </button>
