@@ -323,7 +323,7 @@ article.play {
   justify-content: center;
   background: white;
   background-color: white;
-  background: linear-gradient(to bottom, hsl(28deg 8% 73%) 20%, hsl(0deg 0% 3%) 100%);
+  background: linear-gradient(125deg, #1674a6 0%, #5f1256 100%);
   overflow: hidden;
   }
   
