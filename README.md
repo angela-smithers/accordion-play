@@ -7,3 +7,6 @@ https://smithersa.github.io/accordion-play/
 ## code inspiration
 >- css-doodle.com
 >- (more shortly)
+
+## resource
+>- https://getemoji.com/
