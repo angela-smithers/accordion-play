@@ -5,5 +5,5 @@ testing extreme things that can be done with accordions
 https://smithersa.github.io/accordion-play/
 
 ## code inspiration
-css-doodle.com
-(more shortly)
+>- css-doodle.com
+>- (more shortly)
