@@ -191,12 +191,132 @@ css-doodle.voting {
     );
   }
 
+css-doodle.housing {
+    --rule: ( :doodle {
+      position: absolute;
+      width: 100%;
+      @grid: 10 / 101% 100vh;
+      overflow: hidden;
+    }
+    animation: bounce linear @r(7s, 15s) @r(-1s, -5s) infinite;
+    opacity: @r(0.3, 1);
+    @place-cell: @r(100%) @r(100%);
+    @random(.3) {
+    :after {
+      content: 'lorem ipsum';
+      position: absolute;
+      font-size: @r(25px, 35px);
+      transform: rotate(@r(360deg));
+    }
+    }
+    @random(.2) {
+      :after {
+        content: 'ipsum lorem';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+    @random(.2) {
+      :before {
+        content: 'equal housing';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+    @random(.2) {
+      :before {
+        content: '🏡 🏡';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
 
-section.play, article.play {
+    @keyframes bounce {
+      0% {
+        transform: translateY(@r(-101vh, -110vh));
+      }
+      100% {
+        transform: translateY(@r(101vh, 110vh));
+      }
+    }
+    );
+  }
+
+css-doodle.education {
+    --rule: ( :doodle {
+      position: absolute;
+      width: 100%;
+      @grid: 10 / 101% 100vh;
+      overflow: hidden;
+    }
+    animation: bounce linear @r(7s, 15s) @r(-1s, -5s) infinite;
+    opacity: @r(0.3, 1);
+    @place-cell: @r(100%) @r(100%);
+    @random(.3) {
+    :after {
+      content: 'access';
+      position: absolute;
+      font-size: @r(25px, 35px);
+      transform: rotate(@r(360deg));
+    }
+    }
+    @random(.2) {
+      :after {
+        content: 'district lines';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+    @random(.2) {
+      :before {
+        content: 'equal resources';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+    @random(.2) {
+      :before {
+        content: '🏫 📚';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(@r(-101vh, -110vh));
+      }
+      100% {
+        transform: translateY(@r(101vh, 110vh));
+      }
+    }
+    );
+  }
+
+
+article.play {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 25vh;
+  height: 35vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -205,9 +325,10 @@ section.play, article.play {
   background-color: white;
   background: linear-gradient(to bottom, hsl(28deg 8% 73%) 20%, hsl(0deg 0% 3%) 100%);
   overflow: hidden;
-
   }
   
+article.play h2 {
+  color: whitesmoke;
 }
 
 @keyframes load {
