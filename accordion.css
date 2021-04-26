@@ -11,7 +11,7 @@
 .Accordion-trigger {
     background: none;
     border: 0;
-    color: hsl(0, 0%, 13%);
+    color: #f5f5f5;
     display: block;
     font-size: 1rem;
     font-weight: normal;
@@ -327,10 +327,6 @@ article.play {
   overflow: hidden;
   }
   
-article.play h2 {
-  color: whitesmoke;
-}
-
 @keyframes load {
   0% {
     transform: translateX(-200px);
