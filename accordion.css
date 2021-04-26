@@ -41,8 +41,8 @@
 }
 
 .Accordion-icon {
-    border: solid hsl(23, 70%, 46%);
-    border-width: 0 2px 2px 0;
+    border: solid hsl(0, 0%, 33%);
+    border-width: 0 7px 7px 0;
     height: 2.5rem;
     pointer-events: none;
     position: absolute;
@@ -62,6 +62,7 @@
 }
 
 .Accordion-panel {
+    background-color: whitesmoke;
     margin: 0;
     padding: 1em 1.5em;
 }
@@ -130,18 +131,79 @@ css-doodle {
     );
   }
 
-section.play {
+css-doodle.voting {
+    --rule: ( :doodle {
+      position: absolute;
+      width: 100%;
+      @grid: 10 / 101% 100vh;
+      overflow: hidden;
+    }
+    animation: bounce linear @r(7s, 15s) @r(-1s, -5s) infinite;
+    opacity: @r(0.3, 1);
+    @place-cell: @r(100%) @r(100%);
+    @random(.3) {
+    :after {
+      content: 'votes';
+      position: absolute;
+      font-size: @r(25px, 35px);
+      transform: rotate(@r(360deg));
+    }
+    }
+    @random(.2) {
+      :after {
+        content: 'secret ballot';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+    @random(.2) {
+      :before {
+        content: 'districting';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+    @random(.2) {
+      :before {
+        content: '🗳️';
+        position: absolute;
+        @place-cell: @r(100%) @r(100%);
+        font-size: @r(15px, 25px);
+        z-index: @p(1, 2);
+        transform: rotate(@r(360deg));
+      }
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(@r(-101vh, -110vh));
+      }
+      100% {
+        transform: translateY(@r(101vh, 110vh));
+      }
+    }
+    );
+  }
+
+
+section.play, article.play {
   position: relative;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background: white;
   background-color: white;
-  background: linear-gradient(to bottom, #e6f8f9 20%, #b1e8ed 100%);
+  background: linear-gradient(to bottom, hsl(28deg 8% 73%) 20%, hsl(0deg 0% 3%) 100%);
   overflow: hidden;
 
   }
